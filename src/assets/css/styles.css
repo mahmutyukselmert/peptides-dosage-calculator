@@ -1,0 +1,115 @@
+@charset "UTF-8";
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.wrap {
+  display: block;
+  width: 100%;
+  font-size: 0;
+  letter-spacing: 0;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.wrap > * {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.col {
+  min-height: 1px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+}
+
+form.form-peptides-dosage-calculator {
+  width: 700px;
+  border: 1px solid #ccc;
+  padding: 10px 30px;
+  border-radius: 4px;
+  box-shadow: 1px 3px 4px #ccc;
+}
+form.form-peptides-dosage-calculator .syringe-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Sütunların boyutunu ve sayısını ayarlar */
+  gap: 15px; /* Hücreler arasındaki boşluk */
+  margin: 10px 0;
+}
+form.form-peptides-dosage-calculator .syringe-images .syringe-image-item {
+  cursor: pointer;
+  padding: 5px 9px;
+  height: 55px;
+  transition: all 0.1s;
+}
+form.form-peptides-dosage-calculator .syringe-images .syringe-image-item.selected {
+  border-radius: 4px;
+  border: 2px solid #f26822;
+  box-shadow: 1px 0px 5px 0px #d26822;
+}
+form.form-peptides-dosage-calculator .button {
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.ruler-box {
+  padding: 40px;
+}
+
+img {
+  max-width: 100%; /* Resimlerin maksimum genişliğini içinde bulunduğu div'in genişliği kadar yapar */
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  /* Tablet boyutu için media query */
+  .syringe-image-item {
+    flex-basis: calc(50% - 20px); /* Tablette iki resim yan yana olacak şekilde genişlik ayarı */
+  }
+}
+@media screen and (max-width: 480px) {
+  /* Mobil boyutu için media query */
+  .syringe-image-item {
+    flex-basis: calc(100% - 20px); /* Mobilde resimlerin tam genişlikte olmasını sağlar */
+  }
+}
+/* Custom Bootstrap Form Grup Stili */
+.form-row {
+  margin-top: 20px;
+  margin-bottom: 20px; /* Form grupları arasındaki boşluğu ayarlar */
+}
+
+.form-row label {
+  display: block; /* Etiketleri blok elementi olarak görüntüler */
+  margin-bottom: 5px; /* Etiketlerin altındaki boşluğu ayarlar */
+  font-weight: bold; /* Etiket yazı tipini kalın yapar */
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%; /* Giriş alanlarını genişliğini ayarlar */
+  padding: 10px; /* Giriş alanlarının dolgusunu ayarlar */
+  border-radius: 5px; /* Giriş alanlarının köşelerini yuvarlar */
+  border: 1px solid #ccc; /* Giriş alanlarının kenarlık rengini ve kalınlığını ayarlar */
+  box-sizing: border-box; /* Giriş alanlarının kutu modelini içeriden dışarıya yapar */
+}
+
+.form-row select {
+  height: 40px; /* Seçim alanının yüksekliğini ayarlar */
+}
+
+.form-row textarea {
+  resize: vertical; /* Metin alanının yalnızca dikey yeniden boyutlandırılmasını sağlar */
+}
+
+.form-row .form-control:focus {
+  border-color: #007bff; /* Odaklanıldığında giriş alanının kenarlık rengini değiştirir */
+  outline: 0; /* Odaklanıldığında giriş alanının varsayılan vurgusunu kaldırır */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Odaklanıldığında giriş alanına gölge ekler */
+}/*# sourceMappingURL=styles.css.map */
